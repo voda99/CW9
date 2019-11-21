@@ -8,27 +8,27 @@
 # + ab
 # - b
 # - ba
-REGEXP_1 = ''
+REGEXP_1 = 'a\w'
 
 # + aab
 # + abb
 # + acb
 # - ab
 # - aabc
-REGEXP_2 = ''
+REGEXP_2 = 'a\w{2}'
 
 # + sofia.mp3
 # + sofia.mp4
 # - sofia.mp7
 # - sofia.mp34
-REGEXP_3 = ''
+REGEXP_3 = '\w*\.mp(3|4)'
 
 # + taverna
 # + versus
 # + vera
 # + zveri
 # - zver
-REGEXP_4 = ''
+REGEXP_4 = '[^z][^v][^e][^r]'
 
 # - a
 # - aa
@@ -39,7 +39,7 @@ REGEXP_4 = ''
 # + bbb
 # - bbbb
 # - ccc
-REGEXP_5 = ''
+REGEXP_5 = '[ab]{3}'
 
 # - Ok
 # - OkOk
@@ -49,7 +49,7 @@ REGEXP_5 = ''
 # - abab
 # + ababab
 # - abababab
-REGEXP_6 = ''
+REGEXP_6 = '\w{6}'
 
 # - aaa
 # - aaa aaa
@@ -58,7 +58,7 @@ REGEXP_6 = ''
 # + Aaa aaa aaa
 # - A
 # - aaa A aaa
-REGEXP_7 = ''
+REGEXP_7 = '\w{3} \w{3} \w{3}'
 
 # + abc
 # + abc03
@@ -67,4 +67,4 @@ REGEXP_7 = ''
 # - Aabc
 # - abc1
 # - #abc
-REGEXP_8 = ''
+REGEXP_8 = 'a?[^a]b?.c/*'
